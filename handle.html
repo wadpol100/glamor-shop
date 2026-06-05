@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Glamor Charms Shop</title>
+    <style>
+        body { margin: 0; font-family: 'Kanit', sans-serif; display: flex; background-color: #fff0f5; }
+        
+        /* เมนูซ้าย */
+        .sidebar { width: 260px; background: #333; color: white; height: 100vh; position: fixed; padding-top: 20px; z-index: 1000; }
+        .sidebar h2 { text-align: center; color: #ff69b4; margin-bottom: 30px; }
+        .sidebar ul { list-style: none; padding: 0; }
+        .sidebar ul li { padding: 18px 25px; cursor: pointer; border-bottom: 1px solid #444; transition: 0.3s; display: flex; align-items: center; gap: 10px; }
+        .sidebar ul li:hover { background: #ff69b4; padding-left: 35px; }
+
+        /* โลโก้มุมขวาบน */
+        .logo-top-right { position: fixed; top: 20px; right: 20px; width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #ff69b4; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 2000; }
+
+        /* เนื้อหาหลัก */
+        .main-content { margin-left: 260px; flex: 1; padding: 40px; text-align: center; }
+        .product-container { max-width: 650px; margin: auto; background: white; padding: 30px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .gallery-section { margin-top: 30px; display: flex; flex-direction: column; gap: 20px; }
+        .gallery-item { background: #fff; padding: 15px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .gallery-item img { width: 100%; border-radius: 10px; }
+        .label { font-weight: bold; color: #ff69b4; margin-top: 10px; display: block; font-size: 1.2rem; }
+
+        /* ปุ่มสั่งซื้อและ Popup */
+        .chat-widget { position: fixed; bottom: 30px; right: 30px; z-index: 2000; text-align: right; }
+        
+        .chat-btn { background-color: #ff69b4; color: white; padding: 15px 25px; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); font-weight: bold; display: inline-block; }
+
+        .chat-popup { 
+            position: absolute; bottom: 70px; right: 0; background: white; padding: 20px; 
+            border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); width: 240px; 
+            border: 2px solid #ff69b4; opacity: 0; visibility: hidden; 
+            transform: translateY(10px); transition: all 0.4s ease;
+        }
+
+        /* เมื่อชี้ที่ widget ให้ Popup แสดงผล */
+        .chat-widget:hover .chat-popup { 
+            opacity: 1; visibility: visible; transform: translateY(0); 
+        }
+        
+        .contact-link { display: block; color: #ff69b4; text-decoration: none; margin: 10px 0; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <img src="logo.jpg" alt="Logo" class="logo-top-right">
+    <div class="main-content">
+    <div class="product-container">
+        <h1>วิธีการวัดข้อมือ</h1>
+        <div class="gallery-section">
+            <div class="gallery-item"><img src="size.jpg"><span class="label">วิธีการวัดข้อมือ</span></div>
+        </div>
+    </div>
+</div>
+   <div class="sidebar">
+    <h2>Glamor Menu</h2>
+    <ul>
+        <li onclick="window.location.href='index.html'">หน้าแรก</li>
+        <li onclick="window.location.href='products.html'">สินค้า</li>
+        <li onclick="window.location.href='follow-work.html'">ติดตามสถานะ</li>
+        <li onclick="window.location.href='handle.html'">การวัดข้อมือ</li>
+        <li onclick="window.location.href='chatad.html'">ติดต่อแอดมิน</li>
+        
+</div>
+    <div class="chat-widget">
+        <div class="chat-popup">
+            <h4 style="margin-top:0;">ช่องทางการสั่งซื้อ</h4>
+            <a href="https://www.tiktok.com/view/product/1735900679812122136?_d=e88475a74bfi6c&_svg=1&checksum=6d994b5bb00009f60ce2d6d20bc408102edab334977358fe451f3a1b6a2fce26&encode_params=MIIBUQQMHyFWlXIuAIvhF3MgBIIBLXifVASC6vU_rIwX2IUy6t1W34AnlvLT-7snL3Vze1XcQjj4bVAcGHz2ct1H9l9yonMFwYWR9DVN_Pc79q38h7Te5s0vB23vsUjV1wvE0ti6gOSQ_BPjw0_hMO1lTVoNv17r-OADUgw346iScO5sI-ceWZCOCUEeznZg70He7cR1SXQZewea7bt_N2PdIpYcPj9DD9dG7zzc77MeixXmXBlq2QF1x9eRiivi5QlJnvYfhDPoap2TYQp4lySloTx4fIIdAOeo0U3mWScQjesNXGMFG0Q0iTQOf3BYctI-TC9ocWmPaoh2NMW_sz_7w9K9Ja9e2j-4hvQJxsfteArJtdf36gTZx0w1ZqPuhWZn3z10lFZCbsHer9H9NVcF4OWK7gtufZGMKbwWn_spnSQEEAmYfiV7c6crp1KtbY_Ef4U%3D&og_info=%7B%22title%22%3A%22%5BPre-order%5D+%E0%B8%81%E0%B8%B3%E0%B9%84%E0%B8%A5%E0%B8%AD%E0%B8%B4%E0%B8%95%E0%B8%B2%E0%B8%A5%E0%B8%B5%E0%B8%AA%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B3+Custom+Made+%E0%B9%80%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%81%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B9%80%E0%B8%AD%E0%B8%87%E0%B9%84%E0%B8%94%E0%B9%89%22%2C%22image%22%3A%22https%3A%5C%2F%5C%2Fp16-oec-sg.ibyteimg.com%5C%2Ftos-alisg-i-aphluv4xwc-sg%5C%2F435201bc02894c88aa0e8c60ec3f7ed3~tplv-aphluv4xwc-resize-webp%3A260%3A260.webp%3Fdr%3D15582%26t%3D555f072d%26ps%3D933b5bde%26shp%3D7745054a%26shcp%3D9b759fb9%26idc%3Dmy2%26from%3D2001012042%22%7D&sec_user_id=MS4wLjABAAAAgljf9R9khFYzq0xyIgG7Cp6DE6KARHjU_5N-8dUo9BqhjYGfrm7h-5_rIv0zkGpU&share_app_id=1180&share_link_id=23911473-10E2-4474-971C-53AEB72DD181&share_region=TH&social_share_type=15&timestamp=1780647510&trackParams=%7B%22enable_shop_tab_popup%22%3A1%2C%22device_id%22%3A%227239627281411950081%22%2C%22enter_from_info%22%3A%22product_share_outside%22%2C%22source_page_type%22%3A%22product_share%22%2C%22traffic_source_list%22%3A%5B7%5D%2C%22traffic_source%22%3A7%7D&tt_from=instagram_dm&u_code=DJM9H6HM13IIIE&ug_btm=b8727%2Cb6661&unique_id=manatchita_aaa&user_id=6990216373264974849&utm_campaign=client_share&utm_medium=ios&utm_source=instagram_dm" class="contact-link" target="_blank">TikTok : GlamorCharms</a>
+            <a href="https://www.instagram.com/theglamor_charms" class="contact-link" target="_blank">Instagram : GlamorCharms</a>
+            <p style="margin: 10px 0; color: #555;">โทร: 095-712-4505 [Bam]</p>
+        </div>
+        <div class="chat-btn">ช่องทางสั่งซื้อ</div>
+    </div>
+
+</body>
+</html>
